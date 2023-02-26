@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+    /* outline: 1px solid salmon; */
+}
+
+
+/* ==================== General settings ================================= */
+
+:root {
+    --clr-orange: hsl(25, 97%, 53%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --clr-light-grey: hsl(217, 12%, 63%);
+    --clr-medium-grey: hsl(216, 12%, 54%);
+    --clr-medium-grey-transparent: hsla(216, 12%, 54%, .1);
+
+
+
+    --clr-dark-blue: hsl(213, 24%, 12%);
+    --clr-very-dark-blue: hsl(216, 12%, 8%);
+}
+
+/* ==================== Typography  ================================= */
+
+
+/* ==================== General Layout ================================= */
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--clr-very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+/* ==================== Components ================================= */
+.contenedor {
+    max-width: 400px;
+    background-color: var(--clr-dark-blue);
+    padding: 2rem;
+    border-radius: 2rem;
+    margin: 1rem;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    padding: 1rem;
+    background-color: var(--clr-medium-grey-transparent);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-bottom: 2rem;
+}
+
+.imagen-thank-you{
+    margin-block: 1.7rem;
+}
+
+.titulo {
+    font-size: 1.75rem;
+    color: var(--clr-white);
+    margin-block: .75rem;
+    font-weight: 700;
+}
+
+.texto {
+    color: var(--clr-medium-grey);
+    line-height: 1.5;
+    font-size: .9rem;
+}
+
+.texto-seleccion{
+    color: var(--clr-orange);
+    background-color: var(--clr-medium-grey-transparent);
+    font-weight: 400;
+    font-size: .9rem;
+    padding: .3rem 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1.7rem;
+}
+
+.ta-center{
+    text-align: center;
+}
+
+.rating-list {
+    list-style: none;
+    margin-block: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-item {
+    text-align: center;
+    height: 3rem;
+    aspect-ratio: 1;
+    padding: 1rem;
+    border-radius: 50%;
+    color: var(--clr-light-grey);
+    background-color: var(--clr-medium-grey-transparent);
+    font-weight: 700;
+    transition: transform .3s ease-out, background-color .3s ease-out;
+}
+
+.list-item:hover{
+    background-color: var(--clr-light-grey);
+    color: var(--clr-white);
+}
+
+.list-item--active, .list-item--active:hover{
+    background-color: var(--clr-orange);
+    color: var(--clr-white);
+}
+
+.submit-button {
+    color: var(--clr-white);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    width: 100%;
+    border: 0;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    padding-block: .7rem;
+    background-color: var(--clr-orange);
+    transition: transform .3s ease-out,  background-color .3s ease-out;
+}
+
+.submit-button:active{
+    background-color: var(--clr-white);
+    color: var(--clr-orange);
+}
+
+.submit-button:hover, .list-item:hover, .list-item:active{
+    cursor:pointer;
+    transform: scale(1.03);
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    inset-inline: 0 0;
+    bottom: 0;
+    color: var(--clr-light-grey);
+    padding-bottom: 1rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
