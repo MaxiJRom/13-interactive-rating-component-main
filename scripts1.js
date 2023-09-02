@@ -12,7 +12,7 @@ for (let i = 0; i <= 4; i++) {
   puntaje[i] = document.querySelector(`.list-item:nth-child(${i + 1}`);
 
   puntaje[i].addEventListener("click", (e) => {
-    e.prevetDefault();
+    e.preventDefault();
 
     puntajeElegido = e.target.innerHTML;
 
