@@ -14,9 +14,9 @@ let haySeleccion = false;
 for (let i = 0; i <= 4; i++) {
   puntaje[i] = document.querySelector(`.list-item:nth-child(${i + 1}`);
 
-  puntaje[i].on("click touchstart", (e) => {
-    e.preventDefault();
-
+  puntaje[i].on("touchstart click", (e) => {
+    /*     e.preventDefault();
+     */
     puntajeElegido = e.target.innerHTML;
 
     if (haySeleccion) {
